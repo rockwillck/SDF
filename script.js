@@ -17,7 +17,7 @@ function resize() {
     })
 }
 
-function goopChange(slider, newGoopiness, mtgnID) {
+function goopChange(newGoopiness, mtgnID) {
     for (mtgn of metagons) {
         if (mtgn.id == mtgnID) {
             mtgn.gravity = newGoopiness
@@ -130,7 +130,7 @@ metagons.forEach((mtgn) => {
     <button class="metagonAdj" id="${mtgn.id} onclick="makeMtgnActive(this)">
     <label id="goopLabel${mtgn.id}" for="goopiness">[${mtgn.name}] Goopiness (${mtgn.gravity})</label>
     <div class="slidecontainer">
-        <input type="range" class="goopinessSlider" name="goopiness" min="1" max="500" value="${mtgn.gravity}" oninput="goopChange(this, this.value, ${mtgn.id})" onmousedown="sliderActive(true)" onmouseup="sliderActive(false)">
+        <input type="range" class="goopinessSlider" name="goopiness" min="1" max="500" value="${mtgn.gravity}" oninput="goopChange(this.value, ${mtgn.id})" onmousedown="sliderActive(true)" onmouseup="sliderActive(false)">
     </div>
     </button>
 `
