@@ -3,6 +3,12 @@ const ctx = canvas.getContext("2d")
 canvas.width = 1024
 canvas.height = 1024
 
+var goopiness = 100
+function goopChange(newGoopiness) {
+    goopiness = newGoopiness
+    document.getElementById("goopLabel").innerText = `Goopiness (${goopiness})`
+}
+
 function normalize(force) {
     return {x:force.x/Math.sqrt(force.x**2 + force.y**2), y:force.y/Math.sqrt(force.x**2 + force.y**2)}
 }
@@ -38,7 +44,7 @@ class Polygon {
             })
             pull.x /= totalGravity
             pull.y /= totalGravity
-            this.bufferVertices.push({x:vertex.x + pull.x*100, y:vertex.y + pull.y*100})
+            this.bufferVertices.push({x:vertex.x + pull.x*goopiness, y:vertex.y + pull.y*goopiness})
         })
         this.calculateCenter()
     }

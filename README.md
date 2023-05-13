@@ -9,7 +9,7 @@ Metaballs. Gooey, gloopy, delicious metaballs. Traditional metaball implementati
 - YAMI is not true metaballs, but rather a pseudo-metaball implementations
 - YAMI isn't always accurate to how true metaballs behave
 ## Demo
-You can play around with a dirt-simple YAMI demo [here](https://www.rockwill.dev/Yet-Another-Metabaals-Implementation/)
+You can play around with a dirt-simple YAMI demo [here](https://www.rockwill.dev/Yet-Another-Metaballs-Implementation/)
 ## License
 The MIT License (MIT)
 Copyright © 2023 <copyright holders>
