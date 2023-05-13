@@ -1,4 +1,4 @@
-# Yet-Another-Metabaals-Implementation
+# Yet-Another-Metaballs-Implementation (YAMI)
 Metaballs. Gooey, gloopy, delicious metaballs. Traditional metaball implementations are painstakingly slow and compute intensive, and require optimization and algorithms like marching squares (or cubes) to run in real-time. So I present to you... **YAMI**, a pseudo-metaballs implementation that runs in real-time out of the box and can support any polygon, from circles to squares to hexagons to blocky drawings of dragons. The included demo is just two circles, but you can adjust the incredibly simple code however you'd like.
 ## Pros v. Cons
 ### Pros
@@ -8,6 +8,8 @@ Metaballs. Gooey, gloopy, delicious metaballs. Traditional metaball implementati
 ### Cons
 - YAMI is not true metaballs, but rather a pseudo-metaball implementations
 - YAMI isn't always accurate to how true metaballs behave
+## Demo
+You can play around with a dirt-simple YAMI demo [here](https://www.rockwill.dev/Yet-Another-Metabaals-Implementation/)
 ## License
 The MIT License (MIT)
 Copyright © 2023 <copyright holders>
