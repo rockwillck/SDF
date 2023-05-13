@@ -17,12 +17,12 @@ class Polygon {
 
     calculateCenter() {
         this.center = {x:0, y:0}
-        this.bufferVertices.forEach((vertex) => {
+        this.vertices.forEach((vertex) => {
             this.center.x += vertex.x
             this.center.y += vertex.y
         })
-        this.center.x /= this.bufferVertices.length
-        this.center.y /= this.bufferVertices.length
+        this.center.x /= this.vertices.length
+        this.center.y /= this.vertices.length
     }
 
     update(objects) {
