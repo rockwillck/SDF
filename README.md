@@ -4,6 +4,16 @@ Metaballs. Gooey, gloopy, delicious metaballs. Traditional metaball implementati
 There are, of course, many ways to calculate true metaballs. One of my favorite methods I've seen so far uses a charge function and a threshhold. But all of those methods require pixel by pixel - or in the case of marching square, cells that grow increasingly close to the size of a pixel as your resolution increases - rendering. With multithreading, interpolation, and other optimizations, metaballs *can* run in real-time. YAMI, however, will run in real time with passable accuracy without optimization, multiple threads, access to the GPU, or even pixel-by-pixel rendering! Instead, it employs a rough estimation of gravity.
 ### What? Gravity?
 If you think about it, metaballs are a lot like balls of sand. If you treat them less as a shape and more as an amalgamation of particles, you can see how, by taking the center of a metaball as a source of gravity (or attraction), you could estimate where the particles should go. Then, by simply rendering the particles, you get something remarkably similar to metaballs without all the overhead of all those blank pixels.
+## Classic v. Particle
+You may notice, upon close inspection, that YAMI is actually two different methods: classic and particle. Both will give you similar results, but there are some key differences:
+### Performance
+Classic is far, far more performant than particle and will always run in real-time.
+### Accuracy
+Particle is more accurate than classic. However, both suffer from some issues at high goop levels. Particle is able to better handle overlapping metagons.
+### Rendering
+Depending on your uses, classic or particle will give you better rendering results. Particle handles each particle separately, so it will be more accurate at higher resolutions, while classic simply handles the outermost vertices.
+### How to decide
+In the end, classic and particle simply have different applications. It's best to try them out and decide for yourself which one to use.
 ## Pros v. Cons
 ### Pros
 - YAMI is incredibly fast

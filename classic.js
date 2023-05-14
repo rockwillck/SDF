@@ -114,7 +114,7 @@ function generateCircle(x, y, radius) {
     for (theta=0;theta<Math.PI*2;theta+=Math.PI/200) {
         circleVertices.push({x:x+Math.cos(theta)*radius, y:y+Math.sin(theta)*radius})
     }
-    return new Polygon(circleVertices, 300)
+    return new Polygon(circleVertices, 100)
 }
 
 var mouse = [0, 0]
@@ -123,7 +123,7 @@ window.addEventListener(("mousemove"), (e) => {
 })
 
 for (i=0;i<2;i++) {
-    metagons.push(generateCircle(canvas.width*Math.random(), canvas.height*Math.random(), Math.sqrt(canvas.width**2 + canvas.height**2)*0.05))
+    metagons.push(generateCircle(canvas.width/2, canvas.height/2, Math.sqrt(canvas.width**2 + canvas.height**2)*0.05))
 }
 metagons.forEach((mtgn) => {
     document.getElementById("goopSliderDiv").innerHTML += `
